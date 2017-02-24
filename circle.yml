@@ -5,15 +5,15 @@ dependencies:
   override:
     - bundle exec pod install --verbose:
       timeout: 1800
-  post:
-    - gem install cupertino
-    - security import ./certificates/xxx.p12 -k "login.keychain" -P "${PRIVATE_KEY_PASSPHRASE}" -T /usr/bin/codesign
-    - ios ios profiles:download "provision_name" -u "${user_id}" -p "${password}" --type distribution  --team "A_team"
-    - security import "cert_name.cer" -k "login.keychain" -T /usr/bin/codesign
-    - ios profiles:download "profile_name" -u "${user_id}" -p "${password}" --type distribution  --team "A_team"
-    - cp "profile_name.mobileprovision" "$HOME/Library/MobileDevice/Provisioning Profiles"
-deployment:
-  staging:
-    branch: master
-    commands:
-      - ipa build -w TestCircleCi.xcworkspace -s scheme_name -c Release -m "${profile_name.mobileprovision}" --sdk "iphoneos" --xcargs "CODE_SIGN_IDENTITY=\"CODE_SIGN_ID\"" --verbose
+#   post:
+#     - gem install cupertino
+#     - security import ./certificates/xxx.p12 -k "login.keychain" -P "${PRIVATE_KEY_PASSPHRASE}" -T /usr/bin/codesign
+#     - ios ios profiles:download "provision_name" -u "${user_id}" -p "${password}" --type distribution  --team "A_team"
+#     - security import "cert_name.cer" -k "login.keychain" -T /usr/bin/codesign
+#     - ios profiles:download "profile_name" -u "${user_id}" -p "${password}" --type distribution  --team "A_team"
+#     - cp "profile_name.mobileprovision" "$HOME/Library/MobileDevice/Provisioning Profiles"
+# deployment:
+#   staging:
+#     branch: master
+#     commands:
+#       - ipa build -w TestCircleCi.xcworkspace -s scheme_name -c Release -m "${profile_name.mobileprovision}" --sdk "iphoneos" --xcargs "CODE_SIGN_IDENTITY=\"CODE_SIGN_ID\"" --verbose
