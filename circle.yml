@@ -4,7 +4,10 @@ machine:
 dependencies:
   override:
     - bundle exec pod install --verbose:
-      timeout: 1800
+        timeout: 1800
+  cache_directories:
+    -  "~/.cocoapods/repos/master"
+
 #   post:
 #     - gem install cupertino
 #     - security import ./certificates/xxx.p12 -k "login.keychain" -P "${PRIVATE_KEY_PASSPHRASE}" -T /usr/bin/codesign
