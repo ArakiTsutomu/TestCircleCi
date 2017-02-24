@@ -4,9 +4,8 @@ machine:
 test:
   override:|
   -Xctool -project TestCircleCi.xcodeProj
-  -scheme TestCircleCi
-  -sdk iphonesimulator
-  clean test
+    -scheme TestCircleCi
+    -sdk iphonesimulator
 #   post:
 #     - gem install cupertino
 #     - security import ./certificates/xxx.p12 -k "login.keychain" -P "${PRIVATE_KEY_PASSPHRASE}" -T /usr/bin/codesign
