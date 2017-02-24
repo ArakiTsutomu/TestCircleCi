@@ -2,7 +2,7 @@ machine:
   xcode:
     version: "8.0"
 test:
-    override:|
+  override:|
       -Xctool -project TestCircleCi.xcodeProj
         -scheme TestCircleCi
         -sdk iphonesimulator
