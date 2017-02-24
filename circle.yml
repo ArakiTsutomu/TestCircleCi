@@ -1,6 +1,6 @@
 machine:
   xcode:
-    version: "7.3.1"
+    version: "7.1"
 #   post:
 #     - gem install cupertino
 #     - security import ./certificates/xxx.p12 -k "login.keychain" -P "${PRIVATE_KEY_PASSPHRASE}" -T /usr/bin/codesign
