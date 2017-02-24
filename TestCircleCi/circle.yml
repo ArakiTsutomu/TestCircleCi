@@ -7,4 +7,4 @@ dependencies:
         timeout: 300
 test:
   override:
-    - xcodebuild test -scheme Retty -workspace TestCircleCi.xcworkspace -destination 'name=iPhone 6'
+    - xcodebuild test -scheme TestCircleCi -workspace TestCircleCi.xcworkspace -destination 'name=iPhone 6'
