@@ -1,7 +1,7 @@
 machine:
   xcode:
     version: "8.0"
-  test:
+test:
     override:|
       -Xctool -project TestCircleCi.xcodeProj
         -scheme TestCircleCi
