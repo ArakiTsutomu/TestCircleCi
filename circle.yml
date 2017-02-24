@@ -1,25 +1,6 @@
 machine:
   xcode:
-    version: "7.3"
-  test:
-    override:
-        - set -o pipefail &&
-            xcodebuild
-            CODE_SIGNING_REQUIRED=NO
-            CODE_SIGN_IDENTITY=
-            PROVISIONING_PROFILE=
-            -sdk iphonesimulator
-            -destination 'platform=iOS Simulator,OS=8.1,name=iPhone 6'
-            -workspace TestCircleCi.xcworkspace
-            -scheme "TestCircleCi"
-            -derivedDataPath ./build
-            analyze clean build test |
-        tee $CIRCLE_ARTIFACTS/xcode_raw.log |
-        xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml -scheme "TestCircleCi"
-        clean build test |
-      tee $CIRCLE_ARTIFACTS/xcode_raw.log |
-      xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
-
+    version: "8.0"
 #   post:
 #     - gem install cupertino
 #     - security import ./certificates/xxx.p12 -k "login.keychain" -P "${PRIVATE_KEY_PASSPHRASE}" -T /usr/bin/codesign
