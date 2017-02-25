@@ -4,5 +4,3 @@ machine:
 deployment:
   test:
     branch: master
-     commands:
-       - fastlane gym
