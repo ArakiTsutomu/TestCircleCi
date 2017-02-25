@@ -2,16 +2,15 @@ machine:
   xcode:
     version: "7.3"
 test:
-  pre:
-    - gem install bundler
   override:
     - set -o pipefail &&
       xcodebuild
-      CODE_SIGNING_REQUIRED=NO
-      CODE_SIGN_IDENTITY=
-      PROVISIONING_PROFILE=
-      -sdk iphonesimulator
-      -destination 'platform=iOS Simulator,OS=8.0,name=iPhone 6'
-      clean build test |
+        CODE_SIGNING_REQUIRED=NO
+        CODE_SIGN_IDENTITY=
+        PROVISIONING_PROFILE=
+        -destination 'platform=iOS Simulator,OS=8.0,name=iPhone 6'
+        -sdk iphonesimulator
+        -project TestCircleCi.xcodeproj
+        clean build test |
       tee $CIRCLE_ARTIFACTS/xcode_raw.log |
       xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
