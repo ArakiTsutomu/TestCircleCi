@@ -8,7 +8,7 @@ test:
         CODE_SIGNING_REQUIRED=NO
         CODE_SIGN_IDENTITY=
         PROVISIONING_PROFILE=
-        -destination 'platform=iOS Simulator,OS=8.4,name=iPhone 6'
+        -destination 'platform=iOS Simulator,OS=9.3,name=iPhone 6'
         -sdk iphonesimulator
         -project TestCircleCi/TestCircleCi.xcodeproj
         -scheme 'TestCircleCi'
