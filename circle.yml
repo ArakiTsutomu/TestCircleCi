@@ -1,6 +1,6 @@
 machine:
   xcode:
-    version: 7.3
+    version: 8.0
 # test:
 #   override:
 #     - set -o pipefail &&
@@ -10,7 +10,8 @@ machine:
 #         PROVISIONING_PROFILE=
 #         -destination 'platform=iOS Simulator,OS=8.0,name=iPhone 6'
 #         -sdk iphonesimulator
-#         -project TestCircleCi.xcodeproj
+#         -project TestCircleCi/TestCircleCi.xcodeproj
+#         -scheme 'TestCircleCi'
 #         clean build test |
 #       tee $CIRCLE_ARTIFACTS/xcode_raw.log |
 #       xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
