@@ -2,7 +2,4 @@ machine:
   xcode:
     version: "7.3.1"
   environment:
-    GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: Grander"
-test:
-  pre:
-    - open -b com.apple.iphonesimulator
+    GYM_CODE_SIGNING_IDENTITY: "iPhone Distribution: Grander)"
