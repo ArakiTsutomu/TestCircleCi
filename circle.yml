@@ -7,3 +7,4 @@ test:
       xcodebuild
         -destination 'platform=iOS Simulator,OS=9.3,name=iPhone 6'
         -sdk iphonesimulator
+        -project TestCircleCi/TestCircleCi.xcodeproj
