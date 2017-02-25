@@ -1,16 +1,16 @@
 machine:
   xcode:
-    version: "7.3"
-test:
-  override:
-    - set -o pipefail &&
-        xctool
-        CODE_SIGNING_REQUIRED=NO
-        CODE_SIGN_IDENTITY=
-        PROVISIONING_PROFILE=
-        -destination 'platform=iOS Simulator,OS=8.0,name=iPhone 6'
-        -sdk iphonesimulator
-        -project TestCircleCi.xcodeproj
-        clean build test |
-      tee $CIRCLE_ARTIFACTS/xcode_raw.log |
-      xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
+    version: 7.3
+# test:
+#   override:
+#     - set -o pipefail &&
+#       xcodebuild
+#         CODE_SIGNING_REQUIRED=NO
+#         CODE_SIGN_IDENTITY=
+#         PROVISIONING_PROFILE=
+#         -destination 'platform=iOS Simulator,OS=8.0,name=iPhone 6'
+#         -sdk iphonesimulator
+#         -project TestCircleCi.xcodeproj
+#         clean build test |
+#       tee $CIRCLE_ARTIFACTS/xcode_raw.log |
+#       xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
