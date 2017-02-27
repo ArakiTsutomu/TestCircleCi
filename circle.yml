@@ -1,8 +1,9 @@
 machine:
   xcode:
     version: 7.3
-    environment:
-      XCODE_WORKSPACE: TestCircleCi.xcworkspace
+  environment:
+    XCODE_SCHEME: TestCircleCi
+    XCODE_WORKSPACE: TestCircleCi.xcworkspace
 test:
   override:
     - set -o pipefail &&
