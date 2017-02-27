@@ -1,10 +1,13 @@
 machine:
   xcode:
     version: 7.3
+    environment:
+      XCODE_SCHEME: Development
+      XCODE_WORKSPACE: TestCircleCi.xcworkspace
 test:
   override:
     - set -o pipefail &&
       xcodebuild
         -destination 'platform=iOS Simulator,OS=9.3,name=iPhone 6'
         -sdk iphonesimulator
-        -project TestCircleCi/TestCircleCi.xcodeproj
+        -configuration Development
