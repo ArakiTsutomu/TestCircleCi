@@ -2,7 +2,7 @@ machine:
   xcode:
     version: 7.3
     environment:
-      XCODE_SCHEME: Development
+      XCODE_SCHEME: TestCircleCi
       XCODE_WORKSPACE: TestCircleCi.xcworkspace
 test:
   override:
