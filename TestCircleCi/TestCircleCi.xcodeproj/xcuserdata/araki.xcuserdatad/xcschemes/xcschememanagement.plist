@@ -4,13 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Development.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>25</integer>
-		</dict>
 		<key>TestCircleCi.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
