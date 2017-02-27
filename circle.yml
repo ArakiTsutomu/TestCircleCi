@@ -10,5 +10,6 @@ test:
       xcodebuild
         -destination 'platform=iOS Simulator,OS=9.3,name=iPhone 6'
         -sdk iphonesimulator
+        -workspace TestCircleCi.xcworkspace
         -scheme TestCircleCi
         -configuration Development
